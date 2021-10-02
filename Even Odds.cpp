@@ -1,24 +1,17 @@
 #include <stdio.h>
+#include<bits/stdc++.h>
+using namespace std;
 
 int main(){
 	
-	int n, k;
-	scanf("%d %d", &n, &k);
-	if(n%2==0){
-		if(k<=n/2){
-			printf("%lld", (long long)(2*k-1));
-		}
-		else{
-			printf("%lld", (long long)(2*(k-n/2)));
-		}
+	long long n, k;
+	cin>>n>>k;
+	n=(n+1)/2;
+	if(k>n){
+		cout<<(2*(k-n));
 	}
 	else{
-		if(k<=n/2){
-			printf("%lld", (long long)(2*k-1));
-		}
-		else{
-			printf("%lld", (long long)(2*(k-(n+1)/2)));
-		}
+		cout<<(2*k-1);
 	}
 	
 	return 0;
