@@ -13,15 +13,9 @@ int main(){
 			arr[i]--;
 			arr[i-1]=-1;
 		}
-		if(arr[i]==0 && arr[i-1]>=1 && i-1>=0){
-			total++;
+		if(arr[i-1]>=1 && i-1>=0){
 			arr[i-1]--;
-			arr[i]=-1;
-		}
-		else if(arr[i]==0 && arr[i+1]>=1 && i+1<n){
-			total++;
-			arr[i-1]--;
-			arr[i]=-1;
+			arr[i]++;
 		}
 		if(arr[i]>=1){
 			total++;
